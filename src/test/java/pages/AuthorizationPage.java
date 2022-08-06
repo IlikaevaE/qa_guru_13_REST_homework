@@ -18,16 +18,15 @@ public class AuthorizationPage {
     }
 
     @Step("User authorization API test")
-    public Cookie authUserTest(String email, String password) {
+    public Cookie authUserTest() {
         String authCookieValue = given()
                 .contentType("application/x-www-form-urlencoded")
                 .filter(withCustomTemplates())
-                .formParam("Email", email)
-                .formParam("Password", password)
+                .formParam("Email", EMAIL_AUTH)
+                .formParam("Password", PASSWORD_AUTH)
                 .when()
                 .post("http://demowebshop.tricentis.com/login")
                 .then()
-                .log().all()
                 .statusCode(302)
                 .extract()
                 .cookie(AUTH_COOKIE_NAME);

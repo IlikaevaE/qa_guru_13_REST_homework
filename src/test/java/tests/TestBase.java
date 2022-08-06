@@ -10,13 +10,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.AuthorizationPage;
 import pages.RegistrationFormPage;
-import pages.UserFieldsData;
 
 public class TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     AuthorizationPage authorizationPage = new AuthorizationPage();
-    UserFieldsData userFieldsData = new UserFieldsData();
-
 
 
     @BeforeAll
@@ -24,6 +21,8 @@ public class TestBase {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        RestAssured.baseURI = "http://demowebshop.tricentis.com";
+        Configuration.baseUrl = "http://demowebshop.tricentis.com";
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browser = "chrome";

@@ -19,8 +19,7 @@ public class RegistrationFormPage {
 
     @Step("Open the page demowebshop")
     public RegistrationFormPage openPage() {
-        open("/register");
-       // $(".header-logo").shouldHave(Condition.text("Demo Web Shop"));
+        open("http://demowebshop.tricentis.com/register");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
         return this;

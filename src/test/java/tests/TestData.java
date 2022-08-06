@@ -10,8 +10,8 @@ public class TestData {
             EMAIL = faker.internet().emailAddress(),
             PASSWORD = faker.internet().password(),
             AUTH_COOKIE_NAME = "NOPCOMMERCE.AUTH",
-            EMAIL_AUTH = "rest.api@net.com",
-            PASSWORD_AUTH = "@DPm2E!nG97mL",
+            EMAIL_AUTH = "rex/rex@api.net",
+            PASSWORD_AUTH = "E*2LSwmWDXXkh",
             NEW_EMAIL = "rest.rest@mail.de";
 
 
