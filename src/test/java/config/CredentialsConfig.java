@@ -8,8 +8,6 @@ public interface CredentialsConfig extends Config{
 
     String password();
 
-    String baseUrl();
-
     String remoteWD();
 }
 
