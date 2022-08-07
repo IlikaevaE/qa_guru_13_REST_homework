@@ -15,6 +15,7 @@ import pages.RegistrationFormPage;
 
 public class TestBase {
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
@@ -28,13 +29,13 @@ public class TestBase {
 
         RestAssured.baseURI = "http://demowebshop.tricentis.com";
         Configuration.baseUrl = config.baseUrl();
-        // Configuration.baseUrl = "http://demowebshop.tricentis.com";
+
 
         Configuration.browser = "chrome";
         Configuration.browserCapabilities = capabilities;
         Configuration.browserSize = "1820x980";
-        //   Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        Configuration.remote = String.format("https://%s:%s@%s",config.login(),config.password(), config.remoteWD());
+        Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.remoteWD());
+
 
     }
 
