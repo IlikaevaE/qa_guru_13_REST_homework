@@ -1,6 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.CredentialsConfig;
 import helpers.Attach;
@@ -9,6 +11,7 @@ import io.restassured.RestAssured;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.AuthorizationPage;
 import pages.RegistrationFormPage;
@@ -27,6 +30,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
 
+
         // RestAssured.baseURI = "http://demowebshop.tricentis.com";
         Configuration.baseUrl = config.baseUrl();
         //Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.remoteWD());
@@ -40,5 +44,9 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.pageSource();
         Attach.addVideo();
+
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
+        WebDriverRunner.clearBrowserCache();
     }
 }
