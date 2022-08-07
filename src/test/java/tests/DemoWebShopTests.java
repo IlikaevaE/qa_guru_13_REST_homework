@@ -1,10 +1,12 @@
 package tests;
 
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static tests.TestData.*;
@@ -39,6 +41,12 @@ public class DemoWebShopTests extends TestBase {
         getWebDriver().manage().addCookie(authCookie);
         open("http://demowebshop.tricentis.com");
         authorizationPage.checkUserAuthorization();
+      //  open("");
+        open("/customer/info");
+        $("#FirstName").setValue(FIRST_NAME);
+        $("#LastName").setValue(LAST_NAME);
+        $("[name='save-info-button']").click();
+        $("#FirstName").shouldHave(Condition.value(FIRST_NAME));
     }
 }
 

@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
@@ -13,6 +14,7 @@ import static io.restassured.RestAssured.given;
 import static tests.TestData.*;
 
 public class UpdateUserProfile extends TestBase{
+    @Disabled
     @Test
     @DisplayName("Change user data in the user profile")
     void changeUserData() {
