@@ -28,6 +28,7 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
+        Configuration.holdBrowserOpen = true;
 
 
 
