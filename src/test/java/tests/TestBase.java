@@ -19,7 +19,6 @@ public class TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
-
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -27,15 +26,10 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
 
+
         RestAssured.baseURI = "http://demowebshop.tricentis.com";
         Configuration.baseUrl = config.baseUrl();
-
-
-        Configuration.browser = "chrome";
-        Configuration.browserCapabilities = capabilities;
-        Configuration.browserSize = "1820x980";
         Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.remoteWD());
-
 
     }
 
