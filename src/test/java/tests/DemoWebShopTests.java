@@ -10,6 +10,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static tests.TestData.*;
 
 public class DemoWebShopTests extends TestBase {
+    @Disabled
     @Test
     @DisplayName("Fill in the registration form UI test")
     void registerNewUser() {
@@ -28,6 +29,7 @@ public class DemoWebShopTests extends TestBase {
                 .checkResult();
     }
 
+    @Disabled
     @Test
     @DisplayName("Login API Test")
     void userLogin() {
