@@ -29,7 +29,6 @@ public class DemoWebShopTests extends TestBase {
     }
 
     @Test
-    @Disabled
     @DisplayName("Login API Test")
     void userLogin() {
 

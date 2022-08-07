@@ -28,10 +28,10 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
+        Configuration.holdBrowserOpen = true;
 
 
-
-        // RestAssured.baseURI = "http://demowebshop.tricentis.com";
+        RestAssured.baseURI = "http://demowebshop.tricentis.com";
         Configuration.baseUrl = config.baseUrl();
         //Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.remoteWD());
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
