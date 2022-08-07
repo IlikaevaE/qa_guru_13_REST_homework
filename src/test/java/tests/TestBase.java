@@ -45,8 +45,5 @@ public class TestBase {
         Attach.pageSource();
         Attach.addVideo();
 
-        Selenide.clearBrowserCookies();
-        Selenide.clearBrowserLocalStorage();
-        WebDriverRunner.clearBrowserCache();
     }
 }
