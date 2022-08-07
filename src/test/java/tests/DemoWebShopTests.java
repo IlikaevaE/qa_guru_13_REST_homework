@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
@@ -28,6 +29,7 @@ public class DemoWebShopTests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Login API Test")
     void userLogin() {
 
