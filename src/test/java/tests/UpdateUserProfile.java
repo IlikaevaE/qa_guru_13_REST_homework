@@ -14,6 +14,7 @@ import static io.restassured.RestAssured.given;
 import static tests.TestData.*;
 
 public class UpdateUserProfile extends TestBase{
+
     @Disabled
     @Test
     @DisplayName("Change user data in the user profile")

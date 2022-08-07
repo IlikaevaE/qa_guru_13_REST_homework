@@ -1,7 +1,6 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
@@ -32,8 +31,8 @@ public class DemoWebShopTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Login API Test")
-    void userLogin() {
+    @DisplayName("Login API Test + change data in user profile")
+    void updateUserProfile() {
 
         Cookie authCookie = authorizationPage.authUserTest();
 
@@ -41,7 +40,6 @@ public class DemoWebShopTests extends TestBase {
         getWebDriver().manage().addCookie(authCookie);
         open("http://demowebshop.tricentis.com");
         authorizationPage.checkUserAuthorization();
-      //  open("");
         open("http://demowebshop.tricentis.com/customer/info");
         $("#FirstName").setValue(FIRST_NAME);
         $("#LastName").setValue(LAST_NAME);
