@@ -42,7 +42,7 @@ public class DemoWebShopTests extends TestBase {
         open("http://demowebshop.tricentis.com");
         authorizationPage.checkUserAuthorization();
       //  open("");
-        open("/customer/info");
+        open("http://demowebshop.tricentis.com/customer/info");
         $("#FirstName").setValue(FIRST_NAME);
         $("#LastName").setValue(LAST_NAME);
         $("[name='save-info-button']").click();
