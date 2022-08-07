@@ -40,7 +40,7 @@ public class DemoWebShopTests extends TestBase {
         getWebDriver().manage().addCookie(authCookie);
         open("http://demowebshop.tricentis.com");
         authorizationPage.checkUserAuthorization();
-        open("/customer/info");
+        open("http://demowebshop.tricentis.com/customer/info");
         $("#FirstName").setValue(FIRST_NAME);
         $("#LastName").setValue(LAST_NAME);
         $("[name='save-info-button']").click();
