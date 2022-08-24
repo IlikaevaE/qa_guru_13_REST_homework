@@ -13,7 +13,7 @@ import static tests.TestData.*;
 public class DemoWebShopTests extends TestBase {
 
     @Test
-    @DisplayName("Fill in the registration form UI test")
+    @DisplayName("Регистрация пользователя")
     void registerNewUser() {
 
         registrationFormPage
